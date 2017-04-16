@@ -13,6 +13,7 @@ from dateutil import tz
 
 DEFAULT_FMT = '%Y/%m/%d %H:%M:%S'
 
+
 class TimeUtils:
     @classmethod
     def current_timestamp(cls):
@@ -59,3 +60,20 @@ class TimeUtils:
     @classmethod
     def convert_datetime(cls, from_dt, timezone, offset_seconds):
         return from_dt.astimezone(tz.tzoffset(timezone, offset_seconds))
+
+
+if __name__ == '__main__':
+    print(TimeUtils.current_timestamp())
+    print(TimeUtils.current_timestamp_ms())
+    print(TimeUtils.current_utc_datetime())
+    print(TimeUtils.current_local_datetime())
+
+    now_timestamp = TimeUtils.current_timestamp()
+    print(TimeUtils.timestamp2str(now_timestamp, timezone=tz.tzlocal()))  # from dateutil import tz
+    print(TimeUtils.timestamp2datetime(now_timestamp, timezone=tz.tzutc()))
+
+    now_local_dt = TimeUtils.current_local_datetime()
+    print(TimeUtils.datetime2str(now_local_dt))
+
+    utc_dt = TimeUtils.current_utc_datetime()
+    print(TimeUtils.convert_datetime(utc_dt, timezone=tz.tzlocal(), offset_seconds=8 * 3600))  # UTC --> China
