@@ -31,6 +31,16 @@ if __name__ == '__main__':
 
     utc_dt = TimeUtils.current_utc_datetime()
     print(TimeUtils.convert_datetime(utc_dt, timezone=tz.tzlocal(), offset_seconds=8 * 3600)) # UTC --> China
+
+
+    # 1492352448
+    # 1492352448964
+    # 2017-04-16 14:20:48.964633+00:00
+    # 2017-04-16 22:20:48.965634+08:00
+    # 2017/04/16 22:20:48
+    # 2017-04-16 14:20:48+00:00
+    # 2017/04/16 22:20:48
+    # 2017-04-16 22:20:48.965634+08:00
 ```
 
 * urlutil
@@ -49,6 +59,16 @@ if __name__ == '__main__':
     print(Url.decode_query(url.query))  # decode query to Python object
     print(Url.encode_query({'q1': 'v1', 'q2': 'v2'}))
     print(Url.quote_str('unsafe str {};;; **&&'))
+
+
+    # https
+    # www.baidu.com
+    # /path/to/here
+    # q1=v1&q2=v2
+    # frag
+    # [('q1', 'v1'), ('q2', 'v2')]
+    # q1=v1&q2=v2
+    # unsafe%20str%20%7B%7D%3B%3B%3B%20%2A%2A%26%26
 ```
 
 ## License
