@@ -60,5 +60,3 @@ class TimeUtils:
     @classmethod
     def convert_datetime(cls, from_dt, timezone, offset_seconds):
         return from_dt.astimezone(tz.tzoffset(timezone, offset_seconds))
-
-

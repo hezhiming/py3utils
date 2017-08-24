@@ -92,7 +92,5 @@ class Url:
         :param path:
         :return:
         """
-        
+
         return parse.urljoin(base, path)
-
-
