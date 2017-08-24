@@ -1,20 +1,20 @@
 # py3utils: Useful Python 3 utils
- 
+
 Some useful Python 3 utils.
- 
+
 ## Getting Started
- 
+
 ### Prerequisites
- 
+
 * pip install python-dateutil
- 
+
 ### Installing
 1. pip install py3utils
 
 ## Docs
 * datetimeutil
-```
-from py3utils.datetimeutil import TimeUtils
+```python
+from py3utils import TimeUtils
 
 if __name__ == '__main__':
     print(TimeUtils.current_timestamp())
@@ -44,8 +44,8 @@ if __name__ == '__main__':
 ```
 
 * urlutil
-```
-from py3utils.urlutil import Url
+```python
+from py3utils import Url
 
 
 if __name__ == '__main__':
@@ -73,4 +73,4 @@ if __name__ == '__main__':
 
 ## License
 MIT
- 
+
