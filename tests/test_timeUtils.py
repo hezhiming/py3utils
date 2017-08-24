@@ -9,14 +9,14 @@ from unittest import TestCase
 import time
 from datetime import datetime
 from dateutil import tz
-from py3utils.datetimeutil import TimeUtils, DEFAULT_FMT
+from py3utils import TimeUtils, DEFAULT_FMT
 
 
 class TestTimeUtils(TestCase):
     def setUp(self):
         self.utc_dt = datetime.now(tz.tzutc())
         self.local_dt = datetime.now(tz.tzlocal())
-        self.ts = TimeUtils.current_timestamp()
+        self.ts = TimeUtils.get_current_timestamp()
         self.time_str = self.local_dt.strftime(DEFAULT_FMT)
 
     def tearDown(self):
@@ -45,7 +45,7 @@ class TestTimeUtils(TestCase):
         self.assertEqual(time_str, self.time_str)
 
     def test_timestamp2datetime(self):
-        ts = TimeUtils.current_timestamp()
+        ts = TimeUtils.get_current_timestamp()
 
         dt = TimeUtils.timestamp2datetime(ts, timezone=tz.tzlocal())
 

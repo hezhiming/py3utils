@@ -6,7 +6,7 @@
 # 
 
 from unittest import TestCase
-from py3utils.urlutil import Url
+from py3utils import Url
 
 
 class TestUrl(TestCase):
@@ -25,7 +25,7 @@ class TestUrl(TestCase):
         self.assertEqual(self.url.netloc, 'www.baidu.com')
 
     def test_path(self):
-        self.assertEqual(self.url.path, 'path/to/here')
+        self.assertEqual(self.url.path, '/path/to/here')
 
     def test_query(self):
         self.assertEqual(self.url.query, 'q1=v1&q2=v2')
