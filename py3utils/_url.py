@@ -81,14 +81,3 @@ class Url:
         return parse.urldefrag(url)
 
 
-if __name__ == '__main__':
-    url = Url('https://www.baidu.com/path/to/here?q1=v1&q2=v2#frag')
-    print(url.scheme)
-    print(url.netloc)
-    print(url.path)
-    print(url.query)
-    print(url.fragment)
-
-    print(Url.decode_query(url.query))  # decode query to Python object
-    print(Url.encode_query({'q1': 'v1', 'q2': 'v2'}))
-    print(Url.quote_str('unsafe str {};;; **&&'))
