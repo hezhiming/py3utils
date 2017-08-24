@@ -3,7 +3,14 @@
 #
 # date:        2017/4/16
 # author:      he.zhiming
-# 
+#
+
+"""简化调用者的调用负担
+
+对调用者来说, 他不用担心XXUtils处于哪个文件,
+他只需要问 py3utils 要 XXUtils即可
+即 from py3utils import XXUtils
+"""
 
 from ._datetimeutil import TimeUtils
 from ._shellutil import ShellUtils
