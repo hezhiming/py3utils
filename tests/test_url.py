@@ -45,14 +45,21 @@ class TestUrl(TestCase):
 
         self.assertEqual(query_dict, [('q1', 'v1'), ('q2', 'v2')])
 
-    # def test_quote_str(self):
-    #
-    #
-    # def test_unquote_str(self):
-    #     self.fail()
+    def test_escape_str(self):
+        expected = '%20%20'
+        actual = Url.escape_str('  ')
 
-    def test_defragment(self):
-        defraged_url = Url.defragment(self.url_str).url
-        url_obj = Url(defraged_url)
+        self.assertEqual(expected, actual)
 
-        self.assertEqual(url_obj.fragment, '')
+    def test_join_path(self):
+        """测试URL合并"""
+
+        base = '/a/b/'
+        path = 'c/d'
+
+        expected = '/a/b/c/d'
+        actual = Url.join_path(base, path)
+
+        self.assertEqual(expected, actual)
+
+

@@ -58,7 +58,7 @@ if __name__ == '__main__':
 
     print(Url.decode_query(url.query))  # decode query to Python object
     print(Url.encode_query({'q1': 'v1', 'q2': 'v2'}))
-    print(Url.quote_str('unsafe str {};;; **&&'))
+    print(Url.escape_str('unsafe str {};;; **&&'))
 
 
     # https

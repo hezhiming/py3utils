@@ -59,13 +59,13 @@ class Url:
         return parse.parse_qsl(query_str)
 
     @classmethod
-    def quote_str(cls, string):
+    def escape_str(cls, string):
         """对含不安全字符的字符串转码"""
 
         return parse.quote(string)
 
     @classmethod
-    def unquote_str(cls, quoted_str):
+    def unescape_str(cls, quoted_str):
         """解码"""
 
         return parse.unquote(quoted_str)
@@ -79,5 +79,20 @@ class Url:
         """
 
         return parse.urldefrag(url)
+
+    @classmethod
+    def join_path(cls, base, path):
+        """合并路径
+
+        根据标准库的表现, 路径必须被严格的合并
+        比如 /a/b/ + c/d  --> /a/b/c/d
+            /a/b + c/d   --> /a/c/d
+
+        :param base:
+        :param path:
+        :return:
+        """
+        
+        return parse.urljoin(base, path)
 
 
