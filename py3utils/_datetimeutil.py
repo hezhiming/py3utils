@@ -16,11 +16,11 @@ DEFAULT_FMT = '%Y/%m/%d %H:%M:%S'
 
 class TimeUtils:
     @classmethod
-    def current_timestamp(cls):
+    def get_current_timestamp(cls):
         return int(time.time())
 
     @classmethod
-    def current_timestamp_ms(cls):
+    def get_current_timestamp_ms(cls):
         return int(time.time() * 1000)
 
     @classmethod
