@@ -56,3 +56,26 @@ class TestTimeUtils(TestCase):
         local_dt = TimeUtils.current_local_datetime()
 
         self.assertEqual(utc_dt.hour + 8, local_dt.hour)
+
+    def test_timestr_to_timestamp(self):
+        _fmt = '%Y/%m/%d %H:%M:%S'
+        ts = int(time.time())
+        timestr = time.strftime(_fmt, time.localtime(ts))
+
+        expected = TimeUtils.timestr_to_timestamp(timestr, _fmt)
+        actual = ts
+
+        self.assertEqual(expected, actual)
+
+    def test_timestamp_to_timestr(self):
+        _fmt = '%Y/%m/%d %H:%M:%S'
+        ts = int(time.time())
+        timestr = time.strftime(_fmt, time.localtime(ts))
+
+        expected = TimeUtils.timestamp_to_timestr(ts, _fmt)
+        actual = timestr
+
+        self.assertEqual(expected, actual)
+
+        with self.assertRaises(ValueError):
+            TimeUtils.timestamp_to_timestr(-1, _fmt)

@@ -60,3 +60,18 @@ class TimeUtils:
     @classmethod
     def convert_datetime(cls, from_dt, timezone, offset_seconds):
         return from_dt.astimezone(tz.tzoffset(timezone, offset_seconds))
+
+    @classmethod
+    def timestr_to_timestamp(cls, time_str, fmt):
+        dt = datetime.strptime(time_str, fmt)
+
+        return int(dt.timestamp())
+
+    @classmethod
+    def timestamp_to_timestr(cls, ts, fmt):
+        if ts < 0:
+            raise ValueError('ts can not less than 0')
+
+        dt = datetime.fromtimestamp(ts)
+
+        return dt.strftime(fmt)
