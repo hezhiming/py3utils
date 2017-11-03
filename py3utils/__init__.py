@@ -15,3 +15,4 @@
 from ._datetime import TimeUtils, DEFAULT_FMT
 from ._shell import ShellUtils
 from ._url import Url
+from ._math import Integer
