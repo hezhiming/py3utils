@@ -7,10 +7,6 @@
 
 from urllib import parse
 
-__all__ = (
-    "Url"
-)
-
 
 class Url:
     def __init__(self, url):
