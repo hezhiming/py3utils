@@ -3,7 +3,7 @@
 #
 # date:        2017/4/16
 # author:      he.zhiming
-# 
+#
 
 """封装datetime"""
 
