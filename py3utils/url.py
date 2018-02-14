@@ -3,7 +3,9 @@
 #
 # date:        2017/4/16
 # author:      he.zhiming
-# 
+#
+
+from __future__ import (absolute_import, unicode_literals)
 
 from urllib import parse
 

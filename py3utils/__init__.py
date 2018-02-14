@@ -12,10 +12,7 @@
 即 from py3utils import XXUtils
 """
 
-from ._datetime import TimeUtils, DEFAULT_FMT
-from ._shell import ShellUtils
-from ._url import Url
-from ._math import Integer
-from ._os import OSUtils
-from ._file import FileUtils
-from ._path import PathUtils
+from .url import Url
+from .os import OSUtils
+from .command import Command
+from .time import TimeUtils, DatetimeUtils
