@@ -1,0 +1,5 @@
+[flake8]
+exclude = .git,__pycache__,docs/source/conf.py,old,build,dist,.idea,tests,.vscode,__init__.py
+max-complexity = 10
+max-line-length=120
+ignore=
