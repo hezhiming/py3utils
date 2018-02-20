@@ -3,13 +3,23 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to py3utils's documentation!
+py3utils's documentation!
 ====================================
 
-Contents:
+Why
+------------------------------------
 
+
+Docs for User
+-------------------------------------
 .. toctree::
-   :maxdepth: 2
+
+    user/main
+
+
+Docs for Developer
+-------------------------------------
+
 
 
 
