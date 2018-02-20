@@ -11,6 +11,12 @@ import platform
 
 
 class PythonVmUtils:
+    """
+    Usage:
+        print(PythonVmUtils.get_python_vm_str())
+        print(PythonVmUtils.is_py3())
+    """
+
     @classmethod
     def get_python_vm_str(cls) -> str:
         return platform.python_version()
