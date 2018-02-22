@@ -12,7 +12,10 @@
 即 from py3utils import XXUtils
 """
 
+from __future__ import absolute_import, unicode_literals
+
 from .url import Url
 from .os import OSUtils
 from .command import Command
 from .time import TimeUtils, DatetimeUtils
+from .random import RandomUtils
