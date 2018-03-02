@@ -9,21 +9,21 @@ from __future__ import unicode_literals, absolute_import
 
 import sys
 
-from py3utils import Command
+from py3utils import CommandRunner
 
-COMMAND_RUNNER = Command()
+COMMAND_RUNNER = CommandRunner()
 
 
 def _run_pytest():
-    cmd = 'py.test ./tests/'
+    cmd = 'py.test --verbose ./tests/'
 
-    COMMAND_RUNNER.run(cmd)
+    COMMAND_RUNNER.run(cmd, use_pipe=False)
 
 
 def _run_flake8():
-    cmd = 'flake8 py3utils/'
+    cmd = 'flake8 --verbose py3utils/'
 
-    COMMAND_RUNNER.run(cmd)
+    COMMAND_RUNNER.run(cmd, use_pipe=False)
 
 
 def main():
