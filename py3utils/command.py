@@ -16,6 +16,13 @@ from py3utils.str_unicode import UnicodeUtils
 
 class CommandRunner:
     def __init__(self):
+        """
+
+        Usage:
+            CommandRunner().run(some_cmd_str)
+
+        :return:
+        """
         self._cmd_str = None
 
         self._p = None
