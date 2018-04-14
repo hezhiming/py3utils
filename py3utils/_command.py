@@ -9,9 +9,9 @@ from __future__ import unicode_literals, absolute_import
 
 import subprocess
 
-from py3utils.exceptions import CommandRunFailedException
+from py3utils._exceptions import CommandRunFailedException
 
-from py3utils.str_unicode import UnicodeUtils
+from py3utils._str_unicode import UnicodeUtils
 
 
 class CommandRunner:

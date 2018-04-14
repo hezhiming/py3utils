@@ -14,9 +14,10 @@
 
 from __future__ import absolute_import, unicode_literals
 
-from .url import Url
-from .os import OSUtils
-from .command import CommandRunner
-from .time import TimeUtils, DatetimeUtils
-from .random import RandomUtils
-from .str_unicode import UnicodeUtils
+from ._url import Url
+from ._os import OSUtils
+from ._command import CommandRunner
+from ._time import TimeUtils, DatetimeUtils
+from ._random import RandomUtils
+from ._str_unicode import UnicodeUtils
+from ._exceptions import Py3UtilsException

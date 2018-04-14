@@ -10,7 +10,7 @@ from __future__ import unicode_literals, absolute_import
 from unittest import TestCase, skipUnless
 import platform
 
-from py3utils.exceptions import CommandRunFailedException
+from py3utils._exceptions import CommandRunFailedException
 from py3utils import CommandRunner
 
 

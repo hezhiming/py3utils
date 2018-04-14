@@ -32,7 +32,10 @@ Some useful Python 3 utils.
 ### 常用的工具函数
 为了减少调用者的记忆负担, 所有 Utils 都导入到 `py3uitls/__init__.py` 中, 所以可以这样使用:
 ```
-from py3utils import (Url, OSUtils, DatetimeUtils)
+# 调用者只需要关注这个命名空间, 后续不需要再导入其他任何东西( 这很像 Go 语言中的package 概念 )
+import py3utils
+
+py3utils.TimeUtils.get_current_timestamp()
 ```
 
 这是为调用者提供的统一的命名空间, 则调用者完全不用关心实现代码位于哪个 py 文件中.
@@ -40,11 +43,11 @@ from py3utils import (Url, OSUtils, DatetimeUtils)
 ### 异常体系
 异常 class 单独放在 `py3uitls.exceptions` 中, 按照如下形式导入:
 ```
-from py3utils.exceptions import Py3UitlsException
+import py3utils
 
 try:
 
-except Py3UtilsException as e:
+except py3utils.Py3UtilsException as e:
 
 ```
 
