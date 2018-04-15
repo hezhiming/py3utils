@@ -10,7 +10,7 @@ from __future__ import absolute_import, unicode_literals
 import platform
 
 
-class OSUtils:
+class OS:
     _CURRENT_OS = platform.platform().lower()
 
     _LINUX_MARK = 'linux'
@@ -25,5 +25,5 @@ class OSUtils:
         return cls._CURRENT_OS.startswith(cls._LINUX_MARK)
 
     @classmethod
-    def get_current_os(cls):
+    def get_current_os(cls) -> str:
         return cls._CURRENT_OS

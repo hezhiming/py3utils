@@ -21,6 +21,10 @@ class TimeUtils:
     def get_current_timestamp(cls):
         return int(time.time())
 
+    @classmethod
+    def get_current_timestamp_ms(cls):
+        return int(time.time() * 1000)
+
 
 class DatetimeUtils:
     @classmethod
