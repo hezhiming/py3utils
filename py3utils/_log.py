@@ -9,7 +9,6 @@ from __future__ import unicode_literals, absolute_import
 
 import logging
 import logging.config
-from logging import handlers
 
 
 class LogFactory:

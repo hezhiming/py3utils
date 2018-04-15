@@ -43,8 +43,8 @@ class Path:
     def is_file(self):
         return os.path.isfile(self._abspath)
 
-    def join(self, s):
-        return Path(os.path.join(self._abspath, s))
+    def join(self, path_str):
+        return Path(os.path.join(self._abspath, path_str))
 
     def get_basename(self):
         return os.path.basename(self._abspath)
@@ -71,7 +71,7 @@ class Path:
 
     def mkdir(self):
         if self.is_exists():
-            return
+            return False
 
         os.makedirs(self._abspath)
 

@@ -20,7 +20,7 @@ class UnicodeUtils:
         for decoder in try_decoders:
             try:
                 unicode_str = bytes_str.decode(decoder)
-            except UnicodeDecodeError as e:
+            except UnicodeDecodeError:
                 pass
             else:
                 return unicode_str
