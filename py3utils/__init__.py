@@ -22,3 +22,4 @@ from ._random import RandomUtils
 from ._unicode import UnicodeUtils
 from ._exceptions import Py3UtilsException
 from ._assert import Asserts
+from ._enum import BaseEnum
