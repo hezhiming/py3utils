@@ -7,6 +7,8 @@
 
 from __future__ import unicode_literals, absolute_import
 
+from ._exceptions import Py3UtilsException
+
 
 class Asserts:
     """
@@ -15,16 +17,24 @@ class Asserts:
     使用:
         Asserts.not_null(var1).not_null(var2, errmsg='var2 is None').not_empty(var3)
     """
+
     @classmethod
     def not_null(cls, value, *, errmsg='value is None'):
         if value is None:
-            raise TypeError(errmsg)
+            raise Py3UtilsException(errmsg)
 
         return cls
 
     @classmethod
+    def is_true(cls, bool_expr: bool, *, errmsg=''):
+        if bool_expr is not True:
+            raise Py3UtilsException(errmsg)
+
+        return bool_expr
+
+    @classmethod
     def not_empty(cls, value, *, errmsg='value is empty'):
         if not value:
-            raise TypeError(errmsg)
+            raise Py3UtilsException(errmsg)
 
         return cls
