@@ -14,6 +14,7 @@ from __future__ import unicode_literals, absolute_import
 
 import time
 from datetime import datetime
+from datetime import date
 
 
 class TimeUtils:
@@ -24,6 +25,13 @@ class TimeUtils:
     @classmethod
     def get_current_timestamp_ms(cls):
         return int(time.time() * 1000)
+
+    @classmethod
+    def get_today_zero_start_timestamp(cls):
+        today = date.today()
+        timetuple = today.timetuple()
+
+        return time.mktime(timetuple)
 
 
 class DatetimeUtils:
